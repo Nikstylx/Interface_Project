@@ -1,18 +1,24 @@
 const users = [
     {
-        userId: 12345,
-        userName: "cathy123",
-        password: "bestPswd12"
+         User_ID: 12345,
+        Username: "cathy123",
+        Email: "cathy123@gmail.com",
+        Password: "bestPswd12",
+        Created_At: "2024-05-26"
     },
     {
-        userId: 67890,
-        userName: "johnDoe",
-        password: "johnsPswd34"
+        User_ID: 67890,
+        Username: "johnDoe",
+        Email: "johndoe@outlook.com",
+        Password: "johnsPswd34",
+        Created_At: "2026-02-19"
     },
     {
-        userId: 54321,
-        userName: "janeSmith",
-        password: "janesPswd56"
+        User_ID: 54321,
+        Username: "janeSmith",
+        Email: "janesmith@icloud.com",
+        Password: "janesPswd56",
+        Created_At: "2026-06-04"
     }
 ];
 

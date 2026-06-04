@@ -1,10 +1,9 @@
 {
   "name": "interface_project",
   "version": "1.0.0",
-  "description": "BLANK",
+  "description": "Game Library Tracker web application",
   "keywords": [
-    "BLANK",
-    "BLANK"
+    "Game-library-tracker","Reviews","playtime-tracker","game-recommendations"
   ],
   "license": "ISC",
   "author": "Nicholas Hutchins",
