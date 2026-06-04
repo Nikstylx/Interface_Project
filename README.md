@@ -1,5 +1,5 @@
 # Game Library Tracker
-<strong>Project Overview
+**Project Overview**
 
 The Game Library Tracker is a web application that allows users to manage and organize their personal video game collections. Users can track the games they own, monitor their progress, and keep records of completed or ongoing games.
 
