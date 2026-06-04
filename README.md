@@ -18,13 +18,13 @@ This application is designed for gamers who want to organize their game collecti
         <li>Remove games from the library</li>
         <li>View game details (title, genre, platform, release year, developer, publisher)</li>
         <li>Optional: create and manage game reviews</li>
-
+</p>
 **Main Entities**
-> -User
-Game
-Library (user-game relationship)
-Review (optional feature)
-
+<li>User</li>
+        <li>Game</li>
+        <li>Library (user-game relationship)</li>
+        <li>Review (optional feature)</li>
+</p>
 **Purpose**
 The application solves the problem of disorganized game collections by allowing users to keep all their games, progress, and ratings in one place.
 
