@@ -1,17 +1,23 @@
 # Game Library Tracker
-**Project Overview**
+<h2>Project Overview</h2>
+    <p>
+        The Game Library Tracker is a web application that allows users to manage and organize their personal video game collections.
+        Users can track the games they own, monitor their progress, and keep records of completed or ongoing games.
+    </p>
 
-The Game Library Tracker is a web application that allows users to manage and organize their personal video game collections. Users can track the games they own, monitor their progress, and keep records of completed or ongoing games.
+    <p>
+        The purpose of this application is to provide a simple way for users to manage their game library in one centralized system.
+    </p>
 
-The purpose of this application is to provide a simple way for users to manage their game library in one centralized system.
+    <h2>Intended Users</h2>
+    <p>
+        This application is designed for gamers who want to organize their game collections across multiple platforms such as PC,
+        PlayStation, Xbox, and Nintendo Switch.
+    </p>
 
-**Intended Users**
-
-This application is designed for gamers who want to organize their game collections across multiple platforms such as PC, PlayStation, Xbox, and Nintendo Switch.
-
-**Features**
-<ul>
-<li>User registration and login system</li>
+    <h2>Features</h2>
+    <ul>
+        <li>User registration and login system</li>
         <li>Create, read, update, and delete user accounts</li>
         <li>Add games to a personal library</li>
         <li>Update game status (Playing, Completed, Backlog, Dropped)</li>
@@ -19,17 +25,20 @@ This application is designed for gamers who want to organize their game collecti
         <li>Remove games from the library</li>
         <li>View game details (title, genre, platform, release year, developer, publisher)</li>
         <li>Optional: create and manage game reviews</li>
-</ul>
-</p>
-**Main Entities**
-<ul>
-<li>User</li>
+    </ul>
+
+    <h2>Main Entities</h2>
+    <ul>
+        <li>User</li>
         <li>Game</li>
         <li>Library (user-game relationship)</li>
         <li>Review (optional feature)</li>
-</ul>
-</p>
-**Purpose**
-The application solves the problem of disorganized game collections by allowing users to keep all their games, progress, and ratings in one place.
+    </ul>
+
+    <h2>Purpose</h2>
+    <p>
+        The application solves the problem of disorganized game collections by allowing users to keep all their games,
+        progress, and ratings in one place.
+    </p>
 
 ![ERD for Project](./Public/images/ERD.png)
