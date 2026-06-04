@@ -10,14 +10,14 @@ The purpose of this application is to provide a simple way for users to manage t
 This application is designed for gamers who want to organize their game collections across multiple platforms such as PC, PlayStation, Xbox, and Nintendo Switch.
 
 **Features**
-> - User registration and login system
-Create, edit, retrieve, and delete user accounts
-Add games to a personal library
-Update game status (Playing, Completed, Backlog, Dropped)
-Track hours played and game ratings
-Remove games from the library
-View game details including title, genre, platform, release year, developer, and publisher
-Optional: create and manage game reviews
+<li>User registration and login system</li>
+        <li>Create, read, update, and delete user accounts</li>
+        <li>Add games to a personal library</li>
+        <li>Update game status (Playing, Completed, Backlog, Dropped)</li>
+        <li>Track hours played and game ratings</li>
+        <li>Remove games from the library</li>
+        <li>View game details (title, genre, platform, release year, developer, publisher)</li>
+        <li>Optional: create and manage game reviews</li>
 
 **Main Entities**
 > -User
