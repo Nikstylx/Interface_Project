@@ -10,6 +10,7 @@ The purpose of this application is to provide a simple way for users to manage t
 This application is designed for gamers who want to organize their game collections across multiple platforms such as PC, PlayStation, Xbox, and Nintendo Switch.
 
 **Features**
+<ul>
 <li>User registration and login system</li>
         <li>Create, read, update, and delete user accounts</li>
         <li>Add games to a personal library</li>
@@ -18,12 +19,15 @@ This application is designed for gamers who want to organize their game collecti
         <li>Remove games from the library</li>
         <li>View game details (title, genre, platform, release year, developer, publisher)</li>
         <li>Optional: create and manage game reviews</li>
+</ul>
 </p>
 **Main Entities**
+<ul>
 <li>User</li>
         <li>Game</li>
         <li>Library (user-game relationship)</li>
         <li>Review (optional feature)</li>
+</ul>
 </p>
 **Purpose**
 The application solves the problem of disorganized game collections by allowing users to keep all their games, progress, and ratings in one place.
