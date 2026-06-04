@@ -19,13 +19,13 @@ This application is designed for gamers who want to organize their game collecti
         <li>View game details (title, genre, platform, release year, developer, publisher)</li>
         <li>Optional: create and manage game reviews</li>
 </p>
-##Main Entities
+## Main Entities
 <li>User</li>
         <li>Game</li>
         <li>Library (user-game relationship)</li>
         <li>Review (optional feature)</li>
 </p>
-##Purpose
+## Purpose
 The application solves the problem of disorganized game collections by allowing users to keep all their games, progress, and ratings in one place.
 
 ![ERD for Project](./Public/images/ERD.png)
