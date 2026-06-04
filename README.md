@@ -11,19 +11,19 @@ This application is designed for gamers who want to organize their game collecti
 
 **Features**
 > - User registration and login system
-> -Create, edit, retrieve, and delete user accounts
-> -Add games to a personal library
-> -Update game status (Playing, Completed, Backlog, Dropped)
-> -Track hours played and game ratings
-> -Remove games from the library
-> -View game details including title, genre, platform, release year, developer, and publisher
-> -Optional: create and manage game reviews
+Create, edit, retrieve, and delete user accounts
+Add games to a personal library
+Update game status (Playing, Completed, Backlog, Dropped)
+Track hours played and game ratings
+Remove games from the library
+View game details including title, genre, platform, release year, developer, and publisher
+Optional: create and manage game reviews
 
 **Main Entities**
 > -User
-> -Game
-> -Library (user-game relationship)
-> -Review (optional feature)
+Game
+Library (user-game relationship)
+Review (optional feature)
 
 **Purpose**
 The application solves the problem of disorganized game collections by allowing users to keep all their games, progress, and ratings in one place.
