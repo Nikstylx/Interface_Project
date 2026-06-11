@@ -1,12 +1,20 @@
 const express = require('express');
 const path = require('path');
-const app = express();
+const mongoose = require('mongoose');
+require('dotenv').config();
 
+const app = express();
 const userRoutes = require('./server/routes/user');
+const libraryRoutes = require('./server/routes/library');
+
+// MongoDB Connection
+mongoose.connect(process.env.dbURL)
+    .then(() => console.log("DB Connected!!"))
+    .catch(error => console.log(error));
 
 app.use(express.json());
 
-// CORS (from professor requirement)
+// CORS
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -18,7 +26,8 @@ app.use(function(req, res, next) {
 app.use(express.static(__dirname + '/public'));
 
 // Routes
-app.use('/users', userRoutes);
+app.use('/user', userRoutes);
+app.use('/library', libraryRoutes);
 
 // Home route
 app.get('/', (req, res) => {

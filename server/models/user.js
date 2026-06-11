@@ -1,29 +1,65 @@
-const users = [
-    {
-         User_ID: 12345,
-        Username: "cathy123",
-        Email: "cathy123@gmail.com",
-        Password: "bestPswd12",
-        Created_At: "2024-05-26"
-    },
-    {
-        User_ID: 67890,
-        Username: "johnDoe",
-        Email: "johndoe@outlook.com",
-        Password: "johnsPswd34",
-        Created_At: "2026-02-19"
-    },
-    {
-        User_ID: 54321,
-        Username: "janeSmith",
-        Email: "janesmith@icloud.com",
-        Password: "janesPswd56",
-        Created_At: "2026-06-04"
-    }
-];
+// import mongoose 
+const mongoose = require('mongoose');
+// create schema for entity
+const userSchema = new mongoose.Schema({
+    username: { type: String, unique: true, required: true },
+    email: { type: String, required: true },
+    password: { type: String, required: true },
+    created_At: { type: Date, default: Date.now }
+});
+const User = mongoose.model('User', userSchema);
+//create model of schema
+//Read a user
+async function login(username, password) {
+    const user = await getUser(username);
+    if(!user) throw Error ("User not found");
+    if(user.password != password) throw Error ("Incorrect password");
+    return user;
+}
 
-// Function to get ALL users
-let getUsers = () => users;
+//create a user
+async function register(username, email, password) {
+    const user = await getUser(username);
+    if(user) throw Error ("User already exists");
 
-//Need to export to allow access
-module.exports = { getUsers };
+    const newUser = await User.create({
+        username: username,
+        email: email,
+        password: password
+    });
+
+    return newUser;
+}
+
+//update a user
+async function updatePassword(id, password) {
+    const user = await User.findByIdAndUpdate(id, { password: password });
+    if(!user) throw Error ("User not found");
+    return user;
+}
+
+//Delete a user
+async function deleteUser(id) {
+    await User.deleteOne({"_id": id });
+}
+
+async function getUserById(id){
+    return await User.findById(id);
+}
+
+
+//utility functions
+async function getUser(username){
+    return await User.findOne({ "username": username });
+}
+
+
+//export all functions we want to access in routes files
+module.exports = {
+    login,
+    register,
+    updatePassword,
+    deleteUser,
+    getUser,
+    getUserById 
+};
