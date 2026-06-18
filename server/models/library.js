@@ -8,7 +8,7 @@ const librarySchema = new mongoose.Schema({
         required: true
     },
     gameId: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         ref: 'Game',
         required: true
     },

@@ -28,14 +28,14 @@ async function register(username, email, password) {
         password: password
     });
 
-    return newUser;
+    return newUser._doc;
 }
 
 //update a user
 async function updatePassword(id, password) {
     const user = await User.findByIdAndUpdate(id, { password: password });
     if(!user) throw Error ("User not found");
-    return user;
+    return user._doc;
 }
 
 //Delete a user
