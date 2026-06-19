@@ -14,7 +14,7 @@ async function login(username, password) {
     const user = await getUser(username);
     if(!user) throw Error ("User not found");
     if(user.password != password) throw Error ("Incorrect password");
-    return user;
+    return user._doc;
 }
 
 //create a user
