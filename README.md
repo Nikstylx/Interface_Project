@@ -32,4 +32,4 @@ This application is designed for gamers who want to organize their game collecti
 
 The application solves the problem of disorganized game collections by allowing users to keep all their games, progress, and ratings in one place.
 
-![ERD for Project](./Public/images/ERD.png)
+![ERD for Project](./client/public/ERD.png)
