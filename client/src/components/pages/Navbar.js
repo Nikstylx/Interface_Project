@@ -1,40 +1,33 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
 
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           Library Tracker
-        </a>
-
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#nav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        </Link>
 
         <div className="collapse navbar-collapse" id="nav">
           <ul className="navbar-nav">
 
             <li className="nav-item">
-              <a className="nav-link active" href="/">
+              <Link className="nav-link" to="/profile">
                 Profile
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="/library">
+              <Link className="nav-link" to="/login">
                 Login
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="/games">
+              <Link className="nav-link" to="/register">
                 Register
-              </a>
+              </Link>
             </li>
 
           </ul>
