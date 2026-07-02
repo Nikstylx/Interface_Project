@@ -11,6 +11,8 @@ const LoginForm = () => {
     password: ""
   });
 
+  const [error, setError] = useState("");
+
   const { username, password } = user;
 
   const onChange = (e) => {
@@ -19,6 +21,7 @@ const LoginForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    setError("");
 
     fetchData("/user/login", { username, password }, "POST")
       .then((data) => {
@@ -26,8 +29,18 @@ const LoginForm = () => {
           localStorage.setItem("user", JSON.stringify(data));
           navigate("/profile");
         } else {
-          console.log("Login failed", data);
+          setError("Login failed");
         }
+      })
+      .catch((err) => {
+        console.log(err);
+
+        const message =
+          err?.error ||
+          err?.message ||
+          "Login failed";
+
+        setError(message);
       });
   };
 
@@ -65,6 +78,12 @@ const LoginForm = () => {
         <button type="submit" className="btn btn-primary w-100">
           Login
         </button>
+
+        {error && (
+          <div className="alert alert-danger mt-3">
+            {error}
+          </div>
+        )}
       </form>
     </div>
   );

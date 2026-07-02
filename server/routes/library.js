@@ -18,20 +18,25 @@ router
 })
 
 //get all entries for a user
+// get all entries for a user
 .get('/:userId', async (req, res) => {
     try {
         const user = await User.getUserById(req.params.userId);
+
         if (!user) {
-            return res.status(404).send({ error: 'User not found' });
+            return res.status(404).send({
+                error: "User not found"
+            });
         }
+
         const entries = await Library.getLibraryEntries(req.params.userId);
-        if (entries.length === 0) {
-            return res.status(200).send({ message: 'No library entries found for this user' });
-            data: []
-        }
+
         res.send(entries);
+
     } catch (error) {
-        res.status(400).send({ error: error.message });
+        res.status(400).send({
+            error: error.message
+        });
     }
 })
 

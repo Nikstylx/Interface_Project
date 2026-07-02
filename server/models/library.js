@@ -49,14 +49,15 @@ async function createLibraryEntry(data) {
     return await Library.create(data);
 }
 
-//read for all entries for user
+// read all library entries for a user
 async function getLibraryEntries(userId) {
-    return await Library.find({ userId: userId });
+    return await Library.find({ userId: userId })
+        .populate("gameId");
 }
 
 //update a library entry
 async function updateLibraryEntry(id, updateData) {
-    return await Library.findByIdAndUpdate(id, updateData, { new: true });
+    return await Library.findByIdAndUpdate(id, updateData, { returnDocument: "after" });
 }
 
 //delete a library entry
